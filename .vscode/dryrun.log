@@ -1,0 +1,4 @@
+make: Entering directory '/home/moringa/Documents/Moringa-pre-prep-projects/Python/Django/my-gallery'
+python3 manage.py runserver
+make: Leaving directory '/home/moringa/Documents/Moringa-pre-prep-projects/Python/Django/my-gallery'
+ 
