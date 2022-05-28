@@ -10,8 +10,11 @@ class Location(models.Model):
     self.save()
 
 
-  def delete_location(self, location_id):
-    Location.objects.filter(id= location_id).delete()
+  def delete_location(self):
+    self.delete()
+
+  def update_location(self, location_id, updated_name):
+    Location.objects.filter(id=location_id).update(name = updated_name)
 
 
   def __str__(self) -> str:
@@ -23,8 +26,11 @@ class Category(models.Model):
   def save_category(self):
     self.save()
 
-  def delete_category(self, category_id):
-    Category.objects.filter(id= category_id).delete()
+  def delete_category(self):
+    self.delete()
+
+  def update_category(self, category_id, updated_name):
+    Category.objects.filter(id=category_id).update(name = updated_name)
 
 
   def __str__(self) -> str:
@@ -43,8 +49,8 @@ class Image(models.Model):
   def save_image(self):
     self.save()
 
-  def delete_image(self, image_id):
-    Image.objects.filter(id= image_id).delete()
+  def delete_image(self):
+    self.delete()
 
 
   def __str__(self) -> str:
