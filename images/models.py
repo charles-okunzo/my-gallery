@@ -29,8 +29,8 @@ class Category(models.Model):
   def delete_category(self):
     self.delete()
 
-  def update_category(self, category_id, updated_name):
-    Category.objects.filter(id=category_id).update(name = updated_name)
+  def update_category(self, updated_name):
+    self.update(name = updated_name)
 
 
   def __str__(self) -> str:
@@ -51,6 +51,9 @@ class Image(models.Model):
 
   def delete_image(self):
     self.delete()
+
+  def update_location(self, updated_name):
+    self.update(name = updated_name)
 
 
   def __str__(self) -> str:
