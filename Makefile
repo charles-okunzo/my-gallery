@@ -3,3 +3,6 @@ run:
 
 shell:
 				pipenv shell
+
+migrate:
+				python3 manage.py makemigrations images && python3 manage.py migrate
