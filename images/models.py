@@ -6,19 +6,21 @@ class Location(models.Model):
   name = models.CharField(max_length=30)
 
 
+  def __str__(self) -> str:
+    return f'{self.name}'
+
+
   def save_location(self):
     self.save()
 
 
-  def delete_location(self):
-    self.delete()
+  def delete_location(self, location_id):
+    Location.objects.filter(id= location_id).delete()
+  
+  @classmethod
+  def update_location(cls, location_id, updated_name):
+    cls.objects.filter(id=location_id).update(name = updated_name)
 
-  def update_location(self, location_id, updated_name):
-    Location.objects.filter(id=location_id).update(name = updated_name)
-
-
-  def __str__(self) -> str:
-    return f'{self.name}'
 
 class Category(models.Model):
   name = models.CharField(max_length=30)
@@ -26,11 +28,11 @@ class Category(models.Model):
   def save_category(self):
     self.save()
 
-  def delete_category(self):
-    self.delete()
+  def delete_category(self, category_id):
+    Category.objects.filter(id= category_id).delete()
 
-  def update_category(self, updated_name):
-    self.update(name = updated_name)
+  def update_category(self, category_id, updated_name):
+    Category.objects.filter(id=category_id).update(name = updated_name)
 
 
   def __str__(self) -> str:
@@ -49,11 +51,8 @@ class Image(models.Model):
   def save_image(self):
     self.save()
 
-  def delete_image(self):
-    self.delete()
-
-  def update_location(self, updated_name):
-    self.update(name = updated_name)
+  def delete_image(self, image_id):
+    Image.objects.filter(id= image_id).delete()
 
 
   def __str__(self) -> str:
