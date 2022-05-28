@@ -6,11 +6,18 @@ class Location(models.Model):
   name = models.CharField(max_length=30)
 
 
+  def save_location(self):
+    self.save()
+
+
   def __str__(self) -> str:
     return f'{self.name}'
 
 class Category(models.Model):
   name = models.CharField(max_length=30)
+
+  def save_category(self):
+    self.save()
 
 
   def __str__(self) -> str:
@@ -24,6 +31,10 @@ class Image(models.Model):
   category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
   created_at = models.DateTimeField(auto_now_add=True)
   image_path = models.ImageField(upload_to='photos', null=True)
+
+
+  def save_image(self):
+    self.save()
 
 
   def __str__(self) -> str:
