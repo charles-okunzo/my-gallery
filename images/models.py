@@ -10,6 +10,10 @@ class Location(models.Model):
     self.save()
 
 
+  def delete_location(self, location_id):
+    Location.objects.filter(id= location_id).delete()
+
+
   def __str__(self) -> str:
     return f'{self.name}'
 
@@ -18,6 +22,9 @@ class Category(models.Model):
 
   def save_category(self):
     self.save()
+
+  def delete_category(self, category_id):
+    Category.objects.filter(id= category_id).delete()
 
 
   def __str__(self) -> str:
@@ -35,6 +42,9 @@ class Image(models.Model):
 
   def save_image(self):
     self.save()
+
+  def delete_image(self, image_id):
+    Image.objects.filter(id= image_id).delete()
 
 
   def __str__(self) -> str:
