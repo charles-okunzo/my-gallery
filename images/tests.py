@@ -34,4 +34,25 @@ class LocationTestClass(TestCase):
   #   self.assertEqual(updated_location, 'Mombasa')
     
 
+class CategoryTestClass(TestCase):
+  def setUp(self):
+    self.new_category = Category(name = 'Nature')
 
+  def tearDown(self):
+    Category.objects.all().delete()
+
+
+  def test_instance(self):
+    self.new_category.save_category()
+    self.assertTrue(isinstance(self.new_category, Category))
+  
+  
+  def test_save_category(self):
+    self.new_category.save_category()
+    categories = Category.objects.all()
+    self.assertTrue(len(categories)>0)
+
+  def test_delete_category(self):
+    self.new_category.delete_category(1)
+    categories = Category.objects.all()
+    self.assertTrue(len(categories)==0)
