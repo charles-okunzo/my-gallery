@@ -1,3 +1,33 @@
-h1{
-  color: green;
+.navbar-brand{
+  color: #18a0fb;
+}
+.btn-outline-success{
+  border-color: #18a0fb;
+  color: #18a0fb;
+}
+.btn-outline-success:hover{
+  background-color: #18a0fb;
+  color: white;
+  border-color: #18a0fb;
+}
+nav{
+  background-color: #e8f6ff;
+}
+.other{
+  color: #18a0fb;
+}
+.head{
+  color: #fff;
+  background-color: #18a0fb;
+}
+
+.card{
+  background-color: #e8f6ff;
+  box-shadow: 2px 2px 20px 3px #c4c4c4;
+}
+
+hr.blue{
+  width: 20%;
+  border-width: 1vh;
+  border-color: #18a0fb;
 }

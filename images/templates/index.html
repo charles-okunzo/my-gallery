@@ -2,5 +2,72 @@
 
 
 {% block content %}
-<h1>It works</h1>
+<div class="container">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Recents</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Location</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Categories</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="row">
+          <h2 class="mt-5 other"><span class="head">Recent</span> Images<hr class="blue"></h2>
+          {% for item in all_images %}
+          <div class="col-md-3" data-bs-toggle="modal" data-bs-target="#exampleModal{{item.pk}}">
+            <div class="card my-3">
+              <img src="{{item.image_path.url}}" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <p class="card-text">{{item.name}}</p>
+                <p class="card-text text-muted">Uploaded {{item.created_at | timesince}} ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal{{item.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="{{item.image_path.url}}" alt="{{item.name}} image" class="img-responsive img-fluid">
+                      </div>
+
+                      <div class="col-md-6">
+                        <h5 class="fw-bold">{{item.name}}</h5><hr>
+                        <h5  class="text-decoration-underline">Image description</h5>
+                        <p>{{item.description}}</p><hr>
+                        <h5 class="text-decoration-underline">Location</h5>
+                        <p>{{item.location}}</p><hr>
+                        <h5 class="text-decoration-underline">Category</h5>
+                        <p>{{item.category}}</p><hr>
+                        <h5 class="text-decoration-underline">Date</h5>
+                        <p>{{item.created_at}}</p><hr>
+                        <h5 class="text-decoration-underline">Share link</h5>
+                        <p class="font-monospace">{{item.image_path.url}}</p><hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+    </div>
+    
+</div>
 {% endblock %}
