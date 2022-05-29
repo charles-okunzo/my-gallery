@@ -25,7 +25,7 @@
               <img src="{{item.image_path.url}}" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
                 <h5 class="card-text">{{item.name}}</h5><hr>
-                <p class="card-text text-muted">Uploaded {{item.created_at | timesince}} ago</p>
+                <p class="card-text text-muted"><small>Uploaded {{item.created_at | timesince}} ago</small></p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@
               <img src="{{item.image_path.url}}" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
                 <h5 class="card-text">{{item.name}}</h5><hr>
-                <p class="card-text text-muted">Taken from {{item.location}}</p>
+                <p class="card-text text-muted"><small>Taken from {{item.location}}</small></p>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@
               <img src="{{item.image_path.url}}" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
                 <h5 class="card-text">{{item.name}}</h5><hr>
-                <p class="card-text text-muted">Category: {{item.category}}</p>
+                <p class="card-text text-muted"><small>Category: {{item.category}}</small></p>
               </div>
             </div>
           </div>
