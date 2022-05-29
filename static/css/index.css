@@ -1,4 +1,4 @@
-.navbar-brand{
+.navbar-brand, .navbar-brand:hover{
   color: #18a0fb;
 }
 .btn-outline-success{
@@ -30,4 +30,8 @@ hr.blue{
   width: 10%;
   border-width: 1vh;
   border-color: #18a0fb;
+}
+
+.modal-content{
+  background-color: #e8f6ff;
 }

@@ -5,13 +5,14 @@
   <div class="container">
     <div class="row">
       <h3 class="mt-5 other"><span class="head">Search</span> Results<hr class="blue"></h3>
-      {% if searched_images %}
-      <h4>Found {{searched_images| length}} images in {{message}} category</h4>
+      {% if images %}
+      <h4>Found {{images| length}} images in {{message}} category</h4>
       {% else %}
       <h4>Found 0 images in {{message}} category</h4>
       {% endif %}
 
-      {% for item in searched_images %}
+      {% if images %}
+      {% for item in images %}
       <div class="col-md-3" data-bs-toggle="modal" data-bs-target="#exampleModal{{item.pk}}">
         <div class="card my-3">
           <img src="{{item.image_path.url}}" class="card-img-top img-fluid" alt="...">
@@ -55,6 +56,7 @@
         </div>
       </div>
       {% endfor %}
+      {% endif %}
     </div>
   </div>
 {% endblock %}

@@ -21,8 +21,9 @@ def search_by_category(request):
     search_phrase = request.GET.get('image_by_cat')
     searched_images = Image.search_image(search_phrase)
     message = f'{search_phrase}'
+    return render(request, 'search_category.html', {'images': searched_images, 'message': message})
 
   else:
     message = 'You haven\'t searches for any images' 
 
-  return render(request, 'search_category.html', {'searched_images': searched_images, 'message': message})
+    return render(request, 'search_category.html', {'message': message})

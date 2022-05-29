@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 29 16:59:54 2022
+# Make data base, printed on Sun May 29 20:40:35 2022
 
 # Variables
 
@@ -49,9 +47,9 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/share/code/code
+_ = /usr/bin/dbus-update-activation-environment
 # environment
-JOURNAL_STREAM = 8:45637
+JOURNAL_STREAM = 8:45538
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -67,7 +65,7 @@ MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d666966291c124
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
@@ -81,7 +79,7 @@ VSCODE_CWD = /home/moringa
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/moringa/.local/bin:/home/moringa/.cargo/bin:/home/moringa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/moringa/.cargo/bin:/home/moringa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
@@ -97,7 +95,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 1cf123b26ef845bb82c9392c208a6cb9
+INVOCATION_ID = 95baacce4d0842c5817430cadfbfcdad
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -107,7 +105,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 182554
+GIO_LAUNCHED_DESKTOP_FILE_PID = 213844
 # automatic
 %F = $(notdir $%)
 # environment
@@ -157,7 +155,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-21e02a83-8606-47e9-a357-386618821161.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7981dce4-fc8a-4d62-b638-05979c72e11c.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -193,6 +191,8 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = en_GB.UTF-8
 # environment
+NO_AT_BRIDGE = 1
+# environment
 QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
@@ -204,6 +204,8 @@ LC_NUMERIC = en_GB.UTF-8
 LC_MEASUREMENT = en_GB.UTF-8
 # environment
 LC_ALL = C
+# environment
+DBUS_STARTER_BUS_TYPE = session
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
@@ -226,8 +228,10 @@ LC_ADDRESS = en_GB.UTF-8
 LANG = C
 # environment
 VSCODE_PID = 182554
+# environment
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d666966291c124
 # variable set hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=18/132=14%
+# Load=110/1024=11%, Rehash=0, Collisions=18/135=13%
 
 # Pattern-specific Variable Values
 
@@ -275,6 +279,9 @@ migrate:
 run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
 				python3 manage.py runserver
@@ -294,13 +301,12 @@ shell:
 
 # No general ('VPATH' variable) search path.
 
- 
 # strcache buffers: 1 (0) / strings = 28 / storage = 238 B / avg = 8 B
 # current buf: size = 8162 B / used = 238 B / count = 28 / avg = 8 B
 
 # strcache performance: lookups = 35 / hit rate = 20%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=3/35=9%
-# Finished Make data base on Sun May 29 16:59:54 2022
+# Finished Make data base on Sun May 29 20:40:35 2022
 
  
