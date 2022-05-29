@@ -59,6 +59,19 @@ class Image(models.Model):
   def update_image(cls, image_id, updated_name):
     cls.objects.filter(id=image_id).update(name = updated_name)
 
+  @classmethod
+  def get_image_by_id(cls, image_id):
+    cls.objects.get(id=image_id)
+
+  @classmethod
+  def search_image(cls, category):
+    cls.objects.filter(category= category).all()
+
+
+  @classmethod
+  def filter_by_location(cls, location):
+    cls.objects.filter(location = location).all()
+
 
   def __str__(self) -> str:
     return f'{self.name}'
