@@ -43,7 +43,7 @@
                         <img src="{{item.image_path.url}}" alt="{{item.name}} image" class="img-responsive img-fluid">
                       </div>
 
-                      <div class="col-md-6">
+                      <div class="col-md-6 line">
                         <h5 class="fw-bold">{{item.name}}</h5><hr>
                         <h5  class="text-decoration-underline">Image description</h5>
                         <p>{{item.description}}</p><hr>
@@ -62,6 +62,8 @@
               </div>
             </div>
           </div>
+          {% empty %}
+          <h4>You don't have any images yet</h4>
           {% endfor %}
         </div>
       </div>
@@ -69,7 +71,7 @@
         <div class="row">
           <h3 class="mt-5 other"><span class="head">All</span> Locations <i class="fas fa-angle-double-right"></i>A-Z<hr class="blue"></h3>
           {% for item in all_locations %}
-          <div class="col-md-3" data-bs-toggle="modal" data-bs-target="#exampleModal{{item.pk}}">
+          <div class="col-md-3" data-bs-toggle="modal" data-bs-target="#exampleModal1{{item.pk}}">
             <div class="card my-3">
               <img src="{{item.image_path.url}}" class="card-img-top img-fluid" alt="...">
               <div class="card-body">
@@ -79,7 +81,7 @@
             </div>
           </div>
 
-          <div class="modal fade" id="exampleModal{{item.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal1{{item.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -92,7 +94,7 @@
                         <img src="{{item.image_path.url}}" alt="{{item.name}} image" class="img-responsive img-fluid">
                       </div>
 
-                      <div class="col-md-6">
+                      <div class="col-md-6 line">
                         <h5 class="fw-bold">{{item.name}}</h5><hr>
                         <h5  class="text-decoration-underline">Image description</h5>
                         <p>{{item.description}}</p><hr>
@@ -111,6 +113,8 @@
               </div>
             </div>
           </div>
+          {% empty %}
+          <h4>You don't have any images yet</h4>
           {% endfor %}
         </div>
       </div>
@@ -141,7 +145,7 @@
                         <img src="{{item.image_path.url}}" alt="{{item.name}} image" class="img-responsive img-fluid">
                       </div>
 
-                      <div class="col-md-6">
+                      <div class="col-md-6 line">
                         <h5 class="fw-bold">{{item.name}}</h5><hr>
                         <h5  class="text-decoration-underline">Image description</h5>
                         <p>{{item.description}}</p><hr>
@@ -160,6 +164,8 @@
               </div>
             </div>
           </div>
+          {% empty %}
+          <h4>You don't have any images yet</h4>
           {% endfor %}
         </div>
       </div>

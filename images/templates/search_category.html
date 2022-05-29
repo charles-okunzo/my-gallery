@@ -36,7 +36,7 @@
                     <img src="{{item.image_path.url}}" alt="{{item.name}} image" class="img-responsive img-fluid">
                   </div>
 
-                  <div class="col-md-6">
+                  <div class="col-md-6 line">
                     <h5 class="fw-bold">{{item.name}}</h5><hr>
                     <h5  class="text-decoration-underline">Image description</h5>
                     <p>{{item.description}}</p><hr>
@@ -55,6 +55,8 @@
           </div>
         </div>
       </div>
+      {% empty %}
+      <h4>You don't have any images yet</h4>
       {% endfor %}
       {% endif %}
     </div>

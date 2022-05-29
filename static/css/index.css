@@ -35,3 +35,6 @@ hr.blue{
 .modal-content{
   background-color: #e8f6ff;
 }
+.line{
+  border-left: 1px solid #18a0fb;
+}
