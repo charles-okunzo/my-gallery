@@ -33,8 +33,8 @@ class Category(models.Model):
 
   @classmethod
   def update_category(cls, category_id, updated_name):
-    cls.objects.filter(id=category_id).update(name = updated_name)
-
+    updated = cls.objects.filter(id=category_id).update(name = updated_name)
+    return updated
 
   def __str__(self) -> str:
     return f'{self.name}'
@@ -61,17 +61,19 @@ class Image(models.Model):
 
   @classmethod
   def get_image_by_id(cls, image_id):
-    cls.objects.get(id=image_id)
+    found_image = cls.objects.get(pk = image_id)
+    return found_image
 
   @classmethod
   def search_image(cls, category):
-    cls.objects.filter(category= category).all()
+    found_images = cls.objects.filter(category= category).all()
+    return found_images
 
 
   @classmethod
   def filter_by_location(cls, location):
-    cls.objects.filter(location = location).all()
-
+    found_images = cls.objects.filter(location = location).all()
+    return found_images
 
   def __str__(self) -> str:
     return f'{self.name}'

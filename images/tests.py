@@ -29,9 +29,9 @@ class LocationTestClass(TestCase):
 
   # def test_update_location(self):
   #   self.new_location.save_location()
-  #   Location.update_location(1,'Mombasa')
-  #   updated_location = Location.objects.get(id=1)
-  #   self.assertEqual(updated_location, 'Mombasa')
+  #   updated_location = Location.update_location(1,'Mombasa')
+  #   saved_loc = Location.objects.get(pk =1)
+  #   self.assertEqual(updated_location, saved_loc)
     
 
 class CategoryTestClass(TestCase):
@@ -85,3 +85,8 @@ class ImageTestClass(TestCase):
     self.new_image.delete_image(1)
     categories = Image.objects.all()
     self.assertTrue(len(categories)==0)
+
+  def test_get_image_by_id(self):
+    self.new_image.save_image()
+    found_image = Image.get_image_by_id(1)
+    self.assertEqual(found_image, self.new_image)
