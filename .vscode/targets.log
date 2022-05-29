@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat May 28 14:43:49 2022
+# Make data base, printed on Sun May 29 16:59:54 2022
 
 # Variables
 
@@ -49,9 +49,9 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/bin/dbus-update-activation-environment
+_ = /usr/share/code/code
 # environment
-JOURNAL_STREAM = 8:45538
+JOURNAL_STREAM = 8:45637
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -67,7 +67,7 @@ MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d666966291c124
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
@@ -81,7 +81,7 @@ VSCODE_CWD = /home/moringa
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/moringa/.cargo/bin:/home/moringa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/moringa/.local/bin:/home/moringa/.cargo/bin:/home/moringa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
@@ -97,7 +97,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 95baacce4d0842c5817430cadfbfcdad
+INVOCATION_ID = 1cf123b26ef845bb82c9392c208a6cb9
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -107,7 +107,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 46129
+GIO_LAUNCHED_DESKTOP_FILE_PID = 182554
 # automatic
 %F = $(notdir $%)
 # environment
@@ -157,7 +157,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-4fe7dfbb-b534-432b-b20e-e4223a0b2fa3.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-21e02a83-8606-47e9-a357-386618821161.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -193,8 +193,6 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = en_GB.UTF-8
 # environment
-NO_AT_BRIDGE = 1
-# environment
 QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
@@ -206,8 +204,6 @@ LC_NUMERIC = en_GB.UTF-8
 LC_MEASUREMENT = en_GB.UTF-8
 # environment
 LC_ALL = C
-# environment
-DBUS_STARTER_BUS_TYPE = session
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
@@ -229,11 +225,9 @@ LC_ADDRESS = en_GB.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 5661
-# environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d666966291c124
+VSCODE_PID = 182554
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=18/135=13%
+# Load=107/1024=10%, Rehash=0, Collisions=18/132=14%
 
 # Pattern-specific Variable Values
 
@@ -241,9 +235,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d6669
 
 # Directories
 
-# . (device 2053, inode 4480701): 19 files, no impossibilities.
+# . (device 2053, inode 4480701): 20 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -261,9 +255,16 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-27 23:57:12.928052523
+#  Last modified 2022-05-28 15:09:35.653127193
 #  File has been updated.
 #  Successfully updated.
+
+migrate:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+				python3 manage.py makemigrations images && python3 manage.py migrate
 
 # Not a target:
 .DEFAULT:
@@ -286,20 +287,20 @@ shell:
 				pipenv shell
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=1/16=6%
+# Load=7/1024=1%, Rehash=0, Collisions=1/17=6%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 224 B / avg = 8 B
  
-# current buf: size = 8162 B / used = 224 B / count = 26 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 238 B / avg = 8 B
+# current buf: size = 8162 B / used = 238 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 32 / hit rate = 18%
+# strcache performance: lookups = 35 / hit rate = 20%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=3/32=9%
-# Finished Make data base on Sat May 28 14:43:50 2022
+# Load=28/8192=0%, Rehash=0, Collisions=3/35=9%
+# Finished Make data base on Sun May 29 16:59:54 2022
 
  
