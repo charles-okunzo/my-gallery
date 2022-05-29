@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 29 20:40:35 2022
+# Make data base, printed on Sun May 29 23:37:46 2022
 
 # Variables
 
@@ -105,7 +105,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 213844
+GIO_LAUNCHED_DESKTOP_FILE_PID = 234800
 # automatic
 %F = $(notdir $%)
 # environment
@@ -155,7 +155,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7981dce4-fc8a-4d62-b638-05979c72e11c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e9d3e65f-00fc-4428-ad85-2b9bc671abdf.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -279,9 +279,6 @@ migrate:
 run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
 				python3 manage.py runserver
@@ -294,6 +291,9 @@ shell:
 				pipenv shell
 
 # files hash-table stats:
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 # Load=7/1024=1%, Rehash=0, Collisions=1/17=6%
 # VPATH Search Paths
 
@@ -307,6 +307,6 @@ shell:
 # strcache performance: lookups = 35 / hit rate = 20%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=3/35=9%
-# Finished Make data base on Sun May 29 20:40:35 2022
+# Finished Make data base on Sun May 29 23:37:46 2022
 
  
