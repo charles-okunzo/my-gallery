@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 29 23:37:46 2022
+# Make data base, printed on Mon May 30 11:12:33 2022
 
 # Variables
 
@@ -49,7 +51,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/dbus-update-activation-environment
 # environment
-JOURNAL_STREAM = 8:45538
+JOURNAL_STREAM = 8:46538
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -65,11 +67,11 @@ MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d666966291c124
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=8dd5d3898ae763781838bfeb62945158
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1904
+MANAGERPID = 1897
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -85,7 +87,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/moringa-ThinkPad-L440:@/tmp/.ICE-unix/2113,unix/moringa-ThinkPad-L440:/tmp/.ICE-unix/2113
+SESSION_MANAGER = local/moringa-ThinkPad-L440:@/tmp/.ICE-unix/2108,unix/moringa-ThinkPad-L440:/tmp/.ICE-unix/2108
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -95,7 +97,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 95baacce4d0842c5817430cadfbfcdad
+INVOCATION_ID = 517f92ac2cf541d19279fe61c13fd5ae
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -105,7 +107,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 234800
+GIO_LAUNCHED_DESKTOP_FILE_PID = 19075
 # automatic
 %F = $(notdir $%)
 # environment
@@ -117,7 +119,7 @@ PWD = /home/moringa/Documents/Moringa-pre-prep-projects/Python/Django/my-gallery
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2076
+SSH_AGENT_PID = 2071
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -155,7 +157,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e9d3e65f-00fc-4428-ad85-2b9bc671abdf.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-905e4464-36a5-4ff0-8bac-ba6a0f94cf39.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -227,9 +229,9 @@ LC_ADDRESS = en_GB.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 182554
+VSCODE_PID = 5419
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d666966291c124
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=8dd5d3898ae763781838bfeb62945158
 # variable set hash-table stats:
 # Load=110/1024=11%, Rehash=0, Collisions=18/135=13%
 
@@ -239,9 +241,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ed12c843723672a210d6669
 
 # Directories
 
-# . (device 2053, inode 4480701): 20 files, no impossibilities.
+# . (device 2053, inode 4480701): 21 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -286,14 +288,12 @@ run:
 shell:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 5):
 				pipenv shell
 
 # files hash-table stats:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # Load=7/1024=1%, Rehash=0, Collisions=1/17=6%
 # VPATH Search Paths
 
@@ -301,12 +301,12 @@ make: *** No rule to make target 'all'.  Stop.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 238 B / avg = 8 B
-# current buf: size = 8162 B / used = 238 B / count = 28 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 250 B / avg = 8 B
+# current buf: size = 8162 B / used = 250 B / count = 29 / avg = 8 B
 
-# strcache performance: lookups = 35 / hit rate = 20%
+# strcache performance: lookups = 36 / hit rate = 19%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=3/35=9%
-# Finished Make data base on Sun May 29 23:37:46 2022
+# Load=29/8192=0%, Rehash=0, Collisions=3/36=8%
+# Finished Make data base on Mon May 30 11:12:33 2022
 
  
