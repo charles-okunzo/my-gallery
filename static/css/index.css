@@ -32,6 +32,11 @@ nav{
   box-shadow: 2px 2px 20px 3px #c4c4c4;
 }
 
+.card img{
+  max-height: 15rem;
+  object-fit: cover;
+}
+
 hr.blue{
   width: 10%;
   border-width: 1vh;
