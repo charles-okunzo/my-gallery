@@ -30,6 +30,7 @@ nav{
 .card{
   background-color: #e8f6ff;
   box-shadow: 2px 2px 20px 3px #c4c4c4;
+  /* max-height: 18rem; */
 }
 
 .card img{
